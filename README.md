@@ -1,4 +1,4 @@
-# 💳 Real-Time Fraud Detection System
+# 💳 Fraud Detection System using Machine Learning
 
 An AI-powered fraud detection system built using Machine Learning to identify fraudulent credit card transactions in real time.  
 This project uses a Random Forest Classifier with SMOTE (Synthetic Minority Oversampling Technique) to handle highly imbalanced transaction data and improve fraud detection performance.
