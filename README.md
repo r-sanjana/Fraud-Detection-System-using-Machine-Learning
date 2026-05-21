@@ -109,7 +109,7 @@ Evaluated using:
 
 | Metric | Score |
 |---|---|
-| Accuracy | 99.87% |
+| Accuracy | 97.87% |
 | Precision | 58.78% |
 | Recall | 81.05% |
 | F1-Score | 68.14% |
