@@ -132,6 +132,7 @@ Fraud-Detection-System-using-Machine-Learning/
 ## 📊 Model Insights
 
 ![Model Insights](screenshots/model_insight1.png)
+![Model Insights](screenshots/model_insight2.png)
 
 ---
 
