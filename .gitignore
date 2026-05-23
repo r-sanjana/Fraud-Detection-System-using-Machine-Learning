@@ -1,13 +1,16 @@
-# Python cache files
+# Python cache
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
-# Jupyter notebook checkpoints
+# Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
 # Virtual environments
 venv/
 env/
+.venv/
 
 # VS Code settings
 .vscode/
@@ -16,5 +19,19 @@ env/
 .DS_Store
 Thumbs.db
 
-# Trained model files
-*.pkl
+# Python environment files
+.python-version
+
+# Streamlit cache
+.streamlit/secrets.toml
+
+# Model training temporary files
+*.log
+
+# Large generated files (optional)
+# Uncomment if needed
+# outputs/*.pkl
+
+# Mac/Linux temp files
+*.swp
+*.swo
