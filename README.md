@@ -154,7 +154,7 @@ Fraud-Detection-System-using-Machine-Learning/
 ## 📥 Clone Repository
 
 ```bash
-git clone https://github.com/your-username/Fraud-Detection-System-using-Machine-Learning.git
+git clone https://github.com/r-sanjana/Fraud-Detection-System-using-Machine-Learning.git
 cd Fraud-Detection-System-using-Machine-Learning
 ```
 
