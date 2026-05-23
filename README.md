@@ -1,115 +1,68 @@
-# 💳 Fraud Detection System using Machine Learning
+# Fraud Detection System using Machine Learning
 
-An AI-powered fraud detection system built using Machine Learning to identify fraudulent credit card transactions in real time.  
-This project uses a Random Forest Classifier with SMOTE (Synthetic Minority Oversampling Technique) to handle highly imbalanced transaction data and improve fraud detection performance.
-
----
-
-# 🚀 Project Overview
-
-Credit card fraud detection is a major challenge in the financial industry because fraudulent transactions are extremely rare compared to normal transactions.
-
-This project focuses on:
-
-- Detecting fraudulent credit card transactions
-- Handling imbalanced datasets using SMOTE
-- Training a Machine Learning model using Random Forest
-- Evaluating model performance using multiple metrics
-- Generating fraud predictions and risk probabilities
-- Saving trained models for future deployment
+A real-time Credit Card Fraud Detection System built using Machine Learning, Random Forest, SMOTE, and Streamlit Dashboard.
 
 ---
 
-# 📂 Dataset
+## Project Overview
 
-Dataset used:
-- Credit Card Fraud Detection Dataset
+This project detects fraudulent credit card transactions using a Random Forest Machine Learning model trained on highly imbalanced transaction data.
 
-Dataset Characteristics:
-- Transactions made by European cardholders
-- Highly imbalanced dataset
-- Fraud cases are very rare
-- Features are transformed using PCA (`V1` to `V28`)
-- Includes:
-  - `Time`
-  - `Amount`
-  - `Class`
-    - `0` → Normal Transaction
-    - `1` → Fraud Transaction
+The system includes:
+- End-to-end ML pipeline
+- Data preprocessing
+- SMOTE balancing
+- Model evaluation
+- Real-time prediction dashboard
+- Interactive frontend using Streamlit
 
 ---
 
-# 🛠️ Technologies Used
+## Features
+
+- Real-time fraud prediction
+- Interactive Streamlit frontend
+- Fraud probability & risk score
+- Random Forest Machine Learning model
+- SMOTE for class imbalance handling
+- Model performance visualization
+- Confusion matrix & ROC curve
+- Feature importance analysis
+- Fraud/Normal quick sample testing
+
+---
+
+## Tech Stack
 
 - Python
+- Streamlit
+- Scikit-Learn
 - Pandas
 - NumPy
-- Scikit-learn
-- Imbalanced-learn (SMOTE)
 - Matplotlib
 - Seaborn
+- Imbalanced-Learn
 - Joblib
-- Jupyter Notebook
 
 ---
 
-# ⚙️ Machine Learning Workflow
+## Machine Learning Workflow
 
-## 1️⃣ Data Preprocessing
-- Loaded and cleaned dataset
-- Checked missing values
-- Scaled transaction amount and time features
-- Prepared features and labels
-
----
-
-## 2️⃣ Exploratory Data Analysis (EDA)
-Performed:
-- Fraud vs Normal transaction analysis
-- Transaction amount analysis
-- Transaction time distribution analysis
-- Correlation heatmap visualization
+1. Load Kaggle Credit Card Fraud dataset
+2. Perform preprocessing and EDA
+3. Handle class imbalance using SMOTE
+4. Train Random Forest model
+5. Evaluate performance metrics
+6. Save trained model using Joblib
+7. Deploy frontend using Streamlit
 
 ---
 
-## 3️⃣ Handling Imbalanced Data
-Used:
-- **SMOTE (Synthetic Minority Oversampling Technique)**
-
-Purpose:
-- Generate synthetic fraud samples
-- Improve model learning on minority class
-- Reduce model bias toward normal transactions
-
----
-
-## 4️⃣ Model Training
-Model Used:
-- **Random Forest Classifier**
-
-Key Parameters:
-- `n_estimators = 100`
-- `max_depth = 10`
-- `class_weight = balanced`
-
----
-
-## 5️⃣ Model Evaluation
-Evaluated using:
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- ROC-AUC Score
-- Confusion Matrix
-
----
-
-# 📊 Model Performance
+## Model Performance
 
 | Metric | Score |
-|---|---|
-| Accuracy | 97.87% |
+|--------|--------|
+| Accuracy | 99.87% |
 | Precision | 58.78% |
 | Recall | 81.05% |
 | F1-Score | 68.14% |
@@ -117,62 +70,15 @@ Evaluated using:
 
 ---
 
-# 📈 Visualizations Included
-
-- Transaction Amount Analysis
-- Transaction Time Analysis
-- Correlation Heatmap
-- Feature Importance Graph
-- Confusion Matrix
-- ROC Curve
-
----
-
-# 🧠 Feature Importance
-
-The model identified the following features as highly important for fraud detection:
-
-- V14
-- V10
-- V17
-- V4
-- V12
-- V11
-
-These features contributed most toward identifying fraudulent behavior.
-
----
-
-# 🔍 Fraud Prediction System
-
-The project includes:
-- Single transaction prediction
-- Batch transaction prediction
-- Fraud probability estimation
-- Risk level classification
-
-Risk Levels:
-- 🔴 High Risk
-- 🟠 Medium Risk
-- 🟡 Low Risk
-- 🟢 Very Low Risk
-
----
-
-# 💾 Model Saving
-
-The trained model and scaler were saved using Joblib for future reuse.
-
-Saved Files:
-- `fraud_detection_model.pkl`
-- `scaler.pkl`
-
----
-
-# 📁 Project Structure
+## Project Structure
 
 ```bash
-Real-Time-Fraud-Detection/
+Fraud-Detection-System-using-Machine-Learning/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── .gitignore
 │
 ├── notebook/
 │   └── fraud_detection.ipynb
@@ -181,38 +87,80 @@ Real-Time-Fraud-Detection/
 │   ├── fraud_detection_model.pkl
 │   └── scaler.pkl
 │
-├── screenshots/
-│   ├── 02_amount_analysis.png
-│   ├── 03_time_analysis.png
-│   ├── 04_correlation_heatmap.png
-│   ├── 05_feature_importance_corr.png
-│   ├── 06_confusion_matrix_roc.png
-│   └── 07_feature_importance.png
+├── graphs/
+│   ├── confusion_matrix.png
+│   ├── feature_importance.png
+│   └── roc_curve.png
 │
-├── requirements.txt
-└── README.md
+└── screenshots/
+    ├── home_dashboard.png
+    ├── fraud_transaction.png
+    ├── fraud_transaction_op.png
+    ├── normal_transaction.png
+    ├── normal_transaction_op.png
+    └── model_insight.png
 
-```
-
-# ▶️ How To Run The Project
-
-## 1️⃣ Clone Repository
-
-```bash
-git clone https://github.com/r-sanjana/Real-Time-Fraud-Detection.git
 ```
 
 ---
 
-## 2️⃣ Navigate To Project Folder
+## Dashboard Screenshots
+
+### Home Dashboard
+
+![Home Dashboard](screenshots/home_dashboard.png)
+
+---
+
+### Fraud Detection Interface
+
+![Fraud Detection](screenshots/fraud_transaction.png)
+
+---
+
+### Fraudulent Transaction Prediction
+
+![Fraud Output](screenshots/fraud_transaction_op.png)
+
+---
+
+### Legitimate Transaction Prediction
+
+![Normal Output](screenshots/normal_transaction_op.png)
+
+---
+
+### Model Insights
+
+![Model Insights](screenshots/model_insight1.png)
+
+---
+
+## Dataset
+
+Dataset Used:
+- Kaggle Credit Card Fraud Detection Dataset
+
+Dataset Characteristics:
+- 284,807 transactions
+- Highly imbalanced dataset
+- PCA-transformed features (V1–V28)
+- Includes Amount and Time features
+
+---
+
+## Installation & Setup
+
+### Clone Repository
 
 ```bash
-cd Real-Time-Fraud-Detection
+git clone https://github.com/your-username/Fraud-Detection-System-using-Machine-Learning.git
+cd Fraud-Detection-System-using-Machine-Learning
 ```
 
 ---
 
-## 3️⃣ Install Dependencies
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -220,47 +168,43 @@ pip install -r requirements.txt
 
 ---
 
-## 4️⃣ Run Jupyter Notebook
+### Run Streamlit Application
 
 ```bash
-jupyter notebook
-```
-
-Open:
-```text
-fraud_detection.ipynb
+streamlit run app.py
 ```
 
 ---
 
-# 📌 Key Learnings
+## Future Improvements
+
+- Flask/FastAPI deployment
+- SHAP explainability
+- Hyperparameter tuning
+- Real-time transaction API
+- Docker deployment
+- Cloud deployment
+- XGBoost/LightGBM comparison
+
+---
+
+## Learning Outcomes
 
 Through this project, I learned:
-
+- End-to-end ML workflow
 - Handling imbalanced datasets
-- Data preprocessing techniques
-- Fraud detection using Machine Learning
-- Random Forest model training
-- Model evaluation and visualization
-- Risk probability analysis
-- Saving and loading ML models
+- Model evaluation techniques
+- Frontend integration with ML
+- Streamlit dashboard development
+- Model deployment concepts
 
 ---
 
-# 🎯 Future Improvements
+## Author
 
-Possible future enhancements:
-- Real-time API integration
-- Deep Learning models
-- Live transaction monitoring
-- Web dashboard deployment
-- Advanced anomaly detection
-- Real-time alert system
+**Sanjana R**
+
+Artificial Intelligence & Machine Learning Engineering Student
 
 ---
 
-# 👩‍💻 Author
-
-## Sanjana R
-
-Git-Hub: https://github.com/r-sanjana
